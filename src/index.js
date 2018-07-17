@@ -1,12 +1,4 @@
-import Timeline from './components/Timeline/Timeline';
-import Milestone from './components/Milestone/Milestone';
-import TimelineEvent from './components/Event/TimelineEvent';
-import TimelineIcon from './components/Icon/TimelineIcon';
-
-
-module.exports = {
-  Timeline,
-  Milestone,
-  TimelineEvent,
-  TimelineIcon
-};
+export {default as Timeline} from './Timeline'
+export {default as Milestone} from './Milestone'
+export {default as TimelineEvent} from './Event'
+export {default as TimelineIcon} from './Icon'

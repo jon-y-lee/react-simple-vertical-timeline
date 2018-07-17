@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import '../../App.css';
+import './TimelineEvent.css';
 import { withStyles } from '@material-ui/core/styles'
 import Grid from '@material-ui/core/Grid';
 
@@ -26,8 +26,7 @@ const styles = theme => ({
   },
   iconColumn : {
     textAlign: 'center'
-  }
-
+  },
 })
 
 class TimelineEvent extends Component {
@@ -44,7 +43,7 @@ class TimelineEvent extends Component {
 
     let eventRow = (orientation === 'right') ?
       <Grid container >
-        <Grid className="padded-column" xs={5}/>
+        <Grid xs={5}/>
         <Grid className={classes.iconColumn} xs={2}>
           <div className={classes.verticalLine}/>
           <TimelineIcon iconImgSrc = {iconImgSrc}
@@ -86,7 +85,7 @@ class TimelineEvent extends Component {
                                  width={iconWidth}
                                  orientation = {orientation}/>
          </Grid>
-         <Grid className="padded-column" xs={5}/>
+         <Grid xs={5}/>
        </Grid>
 
     return (

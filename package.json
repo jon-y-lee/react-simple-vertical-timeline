@@ -1,23 +1,42 @@
 {
-  "name": "react-vertical-timeline",
-  "version": "0.1.0",
-  "private": true,
-  "keywords": [
-    "material design",
-    "material-ui"
+  "name": "react-simple-vertical-timeline",
+  "version": "1.0.4",
+  "description": "react-simple-vertical-timeline React component",
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "files": [
+    "dist/*.css",
+    "es",
+    "lib",
+    "umd"
   ],
+  "scripts": {
+    "build": "nwb build-react-component && cp src/Event/*css lib/Event/ && cp src/Event/*css es/Event/",
+    "clean": "nwb clean-module && nwb clean-demo",
+    "start": "nwb serve-react-demo",
+    "test": "nwb test-react",
+    "test:coverage": "nwb test-react --coverage",
+    "test:watch": "nwb test-react --server"
+  },
   "dependencies": {
     "@material-ui/core": "1.0.0",
     "@material-ui/icons": "1.0.0",
-    "react": "^16.4.1",
-    "react-dom": "^16.4.1",
-    "react-scripts": "1.1.4",
-    "react-visibility-sensor": "^3.11.0"
+    "css-loader": "^1.0.0",
+    "style-loader": "^0.21.0"
   },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
-  }
+  "peerDependencies": {
+    "react": "16.x"
+  },
+  "devDependencies": {
+    "nwb": "0.21.x",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1"
+  },
+  "author": "",
+  "homepage": "",
+  "license": "MIT",
+  "repository": "",
+  "keywords": [
+    "react-component"
+  ]
 }
